@@ -1,0 +1,23 @@
+version: "3"
+services:
+    remote_debugger:
+        build: .
+        image: "remote_debugger"
+        container_name: "remote_debugger"
+        ports:
+            - "80:80"
+        volumes:
+            - ./app:/var/www/html
+        links:    
+            - mysql
+        restart: always
+        
+    mysql:    
+        image: "mysql:5.7.19"
+        container_name: "mysql_for_remote_debugger"
+        environment:
+            TZ: "Asia/Shanghai"
+            MYSQL_ROOT_PASSWORD: "root"
+        ports:
+            - "3306:3306"
+        restart: always
