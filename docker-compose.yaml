@@ -7,7 +7,7 @@ services:
         ports:
             - "80:80"
         volumes:
-            - ./app:/var/www/html:rw
+            - ./app:/var/www/html
         links:    
             - mydb
         restart: always
