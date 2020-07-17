@@ -7,17 +7,18 @@ services:
         ports:
             - "80:80"
         volumes:
-            - ./app:/var/www/html
+            - ./app:/var/www/html:rw
         links:    
-            - mysql
+            - mydb
         restart: always
         
-    mysql:    
+    mydb:    
         image: "mysql:5.7.19"
         container_name: "mysql_for_remote_debugger"
         environment:
             TZ: "Asia/Shanghai"
             MYSQL_ROOT_PASSWORD: "root"
+            MYSQL_DATABASE: "test"
         ports:
             - "3306:3306"
         restart: always

@@ -1,11 +1,11 @@
 <?php
     error_reporting(-1);
-    $uname = "ctf";
-    $passwd = "password";
+    $uname = "root";
+    $passwd = "root";
     $dbname = "test";
     echo "Username => $uname<br>Password => $passwd<br>Database => $dbname<br>";
 
-    $conn = mysqli_connect('localhost', $uname, $passwd, $dbname);
+    $conn = mysqli_connect('mydb', $uname, $passwd, $dbname);
     if ($conn)
     {
         echo "Connected to database.<br>";
