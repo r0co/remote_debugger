@@ -17,7 +17,7 @@
 3.配置数据库连接（可选）
 ---
 
-详见`app/index.php`中`mysqli_connect('mysql', $uname, $passwd, $dbname);`，注意`host`为`mysql`，默认用户为`root`，密码为`root`
+详见`app/index.php`中`mysqli_connect('mysql', $uname, $passwd, $dbname);`，注意`host`为`mydb`，默认用户为`root`，密码为`root`
 
 更改mysql中用户名和密码、创建默认数据库详见`docker-compose.yaml`
 
